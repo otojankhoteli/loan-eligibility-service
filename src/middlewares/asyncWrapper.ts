@@ -9,11 +9,11 @@ export type AsyncWrapperFn = <
     Locals extends Record<string, unknown> = Record<string, unknown>,
 >(
     handler: (
-      ...args: Parameters<
-      RequestHandler<P, ResBody, ReqBody, ReqQuery, Locals>
-      >
+        ...args: Parameters<
+        RequestHandler<P, ResBody, ReqBody, ReqQuery, Locals>
+        >
     ) => Promise<void>,
 ) => RequestHandler<P, ResBody, ReqBody, ReqQuery, Locals>;
 
 export const asyncWrapper: AsyncWrapperFn = (fn) => (req, res, next) => fn(req, res, next)
-  .catch(next);
+    .catch(next);

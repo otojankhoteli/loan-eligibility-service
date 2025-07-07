@@ -38,10 +38,16 @@
         "typescript": "^5.8.3"
     },
     "dependencies": {
+        "better-sqlite3": "^11.10.0",
         "express": "^5.1.0",
+        "express-zod-safe": "^1.5.3",
         "lodash": "^4.17.21",
+        "reflect-metadata": "^0.2.2",
         "sqlite3": "^5.1.7",
-        "winston": "^3.17.0"
+        "typeorm": "^0.3.25",
+        "uuid": "^11.1.0",
+        "winston": "^3.17.0",
+        "zod": "^3.25.75"
     },
     "lint-staged": {
         "*.{ts}": [
