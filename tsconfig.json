@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+        "lib": ["ES2022"],
+        "module": "commonjs",
+        "allowJs": false,
+        "noImplicitAny": true,
+        "strictNullChecks": true,
+        "removeComments": true,
+        "moduleResolution": "node",
+        "noUnusedLocals": true,
+        "noUnusedParameters": false,
+        "noUncheckedIndexedAccess": true,
+        "allowSyntheticDefaultImports": true,
+        "sourceMap": false,
+        "target": "ES2022",
+        "outDir": "./dist",
+        "skipLibCheck": true,
+        "strict": true,
+        "esModuleInterop": true,
+        "declaration": true,
+        "declarationMap": false,
+        "isolatedModules": true
+    },
+    "include": ["src"]
+}

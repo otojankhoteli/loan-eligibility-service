@@ -1,0 +1,44 @@
+{
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-type-checked",
+        "airbnb-base",
+        "airbnb-typescript/base"
+    ],
+    "root": true,
+    "rules": {
+        "no-console": "off",
+        "no-param-reassign": "off",
+        "consistent-return": "off",
+        "padding-line-between-statements": [
+            "error",
+            { "blankLine": "always", "prev": "if", "next": "*" }
+        ],
+        "no-restricted-syntax": [
+            "error",
+            {
+                "selector": "SwitchStatement",
+                "message": "Switch statements are not allowed."
+            }
+        ]
+    },
+    "env": {
+        "mocha": true
+    },
+    "parserOptions": {
+        "ecmaVersion": 2022,
+        "project": "./tsconfig.eslint.json"
+    },
+    "overrides": [
+        {
+            "files": ["./src/**/*.ts", "./tests/**/*.ts"],
+            "rules": {
+                "@typescript-eslint/no-explicit-any": "off",
+                "@typescript-eslint/no-unsafe-assignment": "off",
+                "@typescript-eslint/no-unsafe-argument": "off",
+                "@typescript-eslint/no-unused-vars": "off"
+            }
+        }
+    ]
+}

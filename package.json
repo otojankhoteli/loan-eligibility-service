@@ -1,0 +1,51 @@
+{
+    "name": "loan-eligibility-service",
+    "version": "1.0.0",
+    "description": "Loan eligibility service",
+    "main": "index.js",
+    "scripts": {
+        "start": "node dist/index.js",
+        "test": "echo \"Error: no test specified\"",
+        "build": "tsc --build --force",
+        "prepare": "husky",
+        "lint": "eslint src --ext .ts",
+        "lint:fix": "npm run lint -- --fix"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/otojankhoteli/loan-eligibility-service.git"
+    },
+    "author": "Otar Jankhoteli",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/otojankhoteli/loan-eligibility-service/issues"
+    },
+    "homepage": "https://github.com/otojankhoteli/loan-eligibility-service#readme",
+    "devDependencies": {
+        "@types/express": "^5.0.3",
+        "@types/lodash": "^4.17.20",
+        "@types/node": "^24.0.10",
+        "eslint": "^8.57.1",
+        "eslint-config-airbnb": "^19.0.4",
+        "eslint-config-airbnb-base": "^15.0.0",
+        "eslint-config-airbnb-typescript": "^18.0.0",
+        "eslint-plugin-chai-friendly": "^1.1.0",
+        "eslint-plugin-import": "^2.32.0",
+        "eslint-plugin-react": "^7.37.5",
+        "husky": "^9.1.7",
+        "lint-staged": "^16.1.2",
+        "mocha": "^11.7.1",
+        "typescript": "^5.8.3"
+    },
+    "dependencies": {
+        "express": "^5.1.0",
+        "lodash": "^4.17.21",
+        "sqlite3": "^5.1.7",
+        "winston": "^3.17.0"
+    },
+    "lint-staged": {
+        "*.{ts}": [
+            "eslint"
+        ]
+    }
+}
