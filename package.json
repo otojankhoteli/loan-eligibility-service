@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "start": "node dist/index.js",
-        "test": "echo \"Error: no test specified\"",
+        "test": "mocha --recursive --forbid-only -r ts-node/register 'tests/**/*.ts'",
         "build": "tsc --build --force",
         "prepare": "husky",
         "lint": "eslint src --ext .ts",
@@ -22,9 +22,13 @@
     },
     "homepage": "https://github.com/otojankhoteli/loan-eligibility-service#readme",
     "devDependencies": {
+        "@types/chai": "^5.2.2",
+        "@types/expect": "^1.20.4",
         "@types/express": "^5.0.3",
         "@types/lodash": "^4.17.20",
+        "@types/mocha": "^10.0.10",
         "@types/node": "^24.0.10",
+        "@types/sinon-chai": "^4.0.0",
         "eslint": "^8.57.1",
         "eslint-config-airbnb": "^19.0.4",
         "eslint-config-airbnb-base": "^15.0.0",
@@ -35,6 +39,8 @@
         "husky": "^9.1.7",
         "lint-staged": "^16.1.2",
         "mocha": "^11.7.1",
+        "sinon": "^21.0.0",
+        "sinon-chai": "^4.0.0",
         "typescript": "^5.8.3"
     },
     "dependencies": {
