@@ -1,4 +1,4 @@
-import { LoanRule } from './interface';
+import { LoanRule } from '../../interfaces/loanRules';
 
 export const isEligibleByMonthlyIncome: LoanRule = (input) => {
     const { monthlyIncome, requestedAmount, loanTermMonths } = input;

@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import { expect } from 'chai';
 import { isEligibleByCreditScore } from '../../../src/services/rules/isEligibleByCreditScore';
-import { LoanRuleInput } from '../../../src/services/rules/interface';
+import { LoanRuleInput } from '../../../src/interfaces/loanRules';
 
 describe('isEligibleByCreditScore', () => {
     const ruleInput: LoanRuleInput = {

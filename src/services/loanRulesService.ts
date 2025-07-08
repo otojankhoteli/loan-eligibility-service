@@ -1,6 +1,6 @@
 import { isEligibleByCreditScore } from './rules/isEligibleByCreditScore';
 import { isEligibleByMonthlyIncome } from './rules/isEligibleByMonthlyIncome';
-import { LoanRuleInput, LoanRuleExecutionResult } from './rules/interface';
+import { LoanRuleInput, LoanRuleExecutionResult } from '../interfaces/loanRules';
 
 const collectRules = () => [
     isEligibleByCreditScore,

@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import { expect } from 'chai';
 import { isEligibleByMonthlyIncome } from '../../../src/services/rules/isEligibleByMonthlyIncome';
-import { LoanRuleInput } from '../../../src/services/rules/interface';
+import { LoanRuleInput } from '../../../src/interfaces/loanRules';
 
 describe('isEligibleByMonthlyIncome', () => {
     const ruleInput: LoanRuleInput = {
