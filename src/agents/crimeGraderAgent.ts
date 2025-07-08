@@ -32,6 +32,8 @@ You will receive JSON array as an input: ${JSON.stringify(crimeData)}
     `.trim();
 
 export const analyzeCrime = async (crimes: any) => {
+    if (!GEMINI_API_KEY) return;
+
     try {
         const prompt = buildCrimeAnalysisPrompt(crimes);
         const response = await ai.models.generateContent({
