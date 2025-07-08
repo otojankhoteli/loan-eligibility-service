@@ -1,6 +1,7 @@
 import { Loan } from '../dao/entities/Loan';
 import { AppDataSource } from '../dao/db';
 import { evaluateLoanEligibility } from './loanRulesService';
+import { loanEventEmitter } from '../lib/loanEmitter';
 
 const loanRepository = AppDataSource.getRepository(Loan);
 
@@ -14,7 +15,9 @@ const saveLoan = async (loanDto: Loan) => {
     newLoan.reason = reason;
     Object.assign(newLoan, loanDto);
 
-    return loanRepository.save(newLoan);
+    const savedLoan = await loanRepository.save(newLoan);
+    loanEventEmitter.emit('loanRequest', savedLoan);
+    return savedLoan;
 };
 
 export { getLoan, saveLoan };

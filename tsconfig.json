@@ -11,7 +11,7 @@
         "noUnusedParameters": false,
         "noUncheckedIndexedAccess": true,
         "allowSyntheticDefaultImports": true,
-        "sourceMap": false,
+        "sourceMap": true,
         "target": "ES2022",
         "outDir": "./dist",
         "skipLibCheck": true,

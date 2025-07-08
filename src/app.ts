@@ -4,6 +4,7 @@ import logger from './logger';
 import { loanRouter } from './routes/loanRoutes';
 import authenticator from './middlewares/authenticator';
 import { AppDataSource } from './dao/db';
+import './listeners/loanRequestListener';
 
 export const creteApp = () => {
     const app = express();

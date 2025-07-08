@@ -10,8 +10,14 @@ export class Loan {
     @Column({ type: 'varchar', length: 255 })
         applicantName: string;
 
+    @Column({ type: 'varchar', length: 255 })
+        propertyAddress: string;
+
     @Column({ type: 'int' })
         creditScore: number;
+
+    @Column({ type: 'int', nullable: true })
+        crimeGrade?: number;
 
     @Column({ type: 'decimal', precision: 10, scale: 2 })
         monthlyIncome: number;
